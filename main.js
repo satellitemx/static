@@ -6,6 +6,8 @@ if (!apple()) {
 	panel.style.backgroundColor = "rgba(26, 26, 26, 0.8)";
 }
 
+shiftPanel();
+
 window.addEventListener('resize', shiftPanel);
 
 for (var i = 0; i < locations.length; i++) {
