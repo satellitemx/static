@@ -6,12 +6,23 @@ if (!apple()) {
 	panel.style.backgroundColor = "rgba(26, 26, 26, 0.8)";
 }
 
+if (ios()) {
+	panel.style.top = "50px";
+}
+
 for (var i = 0; i < locations.length; i++) {
 	locations[i].addEventListener("click", pan);
 }
 
 function apple() {
 	if (window.navigator.appVersion.indexOf("Mac OS X") != -1) {
+		return true;
+	};
+	return false;
+}
+
+function ios() {
+	if (window.navigator.appVersion.indexOf("iPhone") != -1) {
 		return true;
 	};
 	return false;
