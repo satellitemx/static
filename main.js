@@ -3,7 +3,7 @@ var panel = document.getElementById("panel");
 var locations = document.getElementsByClassName("controls");
 
 if (!apple()) {
-	panel.style.backgroundColor = "#1A1A1B";
+	panel.style.backgroundColor = "rgba(26, 26, 26, 0.8)";
 }
 
 for (var i = 0; i < locations.length; i++) {
