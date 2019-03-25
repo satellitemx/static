@@ -2,12 +2,19 @@ var panel = document.getElementById("panel");
 
 var locations = document.getElementsByClassName("controls");
 
-if (window.navigator["appVersion"].indexOf("Windows") != -1) {
+if (!apple()) {
 	panel.style.backgroundColor = "#1A1A1B";
 }
 
 for (var i = 0; i < locations.length; i++) {
 	locations[i].addEventListener("click", pan);
+}
+
+function apple() {
+	if (window.navigator.appVersion.indexOf("Mac OS X") != -1) {
+		return true;
+	};
+	return false;
 }
 
 function pan(event) {
