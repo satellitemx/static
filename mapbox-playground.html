@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+	<title>Map Demo</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css?random=324' rel='stylesheet' />
+	<link href='./map.css' rel='stylesheet' />
+</head>
+<body>
+	<div id='map'></div>
+	<div id="panel">
+		<input type="button" id="unimelb" class="controls" value="University of Melbourne" />
+		<input type="button" id="pdp" class="controls" value="Pewdiepie Mural on Sydney Road" />
+	</div>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1Ijoic2F0ZWxsaSIsImEiOiJjajhqeTg2cjEwNzltMzJtczhqcTc4ZzlnIn0.m3Fu2dw60cqVmDD_Naq5Sg';
+		var map = new mapboxgl.Map({
+			container: 'map',
+			zoom: 12,
+			center: [144.963, -37.814],
+			style: 'mapbox://styles/mapbox/light-v10'
+		});
+
+		map.addControl(new mapboxgl.GeolocateControl({
+			positionOptions: {
+				enableHighAccuracy: true
+			},
+			trackUserLocation: true
+		}));
+
+		map.addControl(new mapboxgl.AttributionControl(), 'top-left');
+	</script>
+	<script src="./main.js">
+	</script>
+</body>
