@@ -6,9 +6,7 @@ if (!apple()) {
 	panel.style.backgroundColor = "rgba(26, 26, 26, 0.8)";
 }
 
-if (ios()) {
-	panel.style.top = "50px";
-}
+window.addEventListener('resize', shiftPanel);
 
 for (var i = 0; i < locations.length; i++) {
 	locations[i].addEventListener("click", pan);
@@ -16,13 +14,6 @@ for (var i = 0; i < locations.length; i++) {
 
 function apple() {
 	if (window.navigator.appVersion.indexOf("Mac OS X") != -1) {
-		return true;
-	};
-	return false;
-}
-
-function ios() {
-	if (window.navigator.appVersion.indexOf("iPhone") != -1) {
 		return true;
 	};
 	return false;
@@ -48,5 +39,13 @@ function pan(event) {
 			speed: 1
 		});
 		return;
+	}
+}
+
+function shiftPanel() {
+	if (window.innerWidth <= 640) {
+		panel.style.top = "40px";
+	} else {
+		panel.style.top = "30px";
 	}
 }
