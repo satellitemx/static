@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>Cloud API Tester</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<input type="text" id="server" placeholder="Server" /><br />
+	<select id="method">
+		<option value="GET">GET</option>
+		<option value="POST">POST</option>
+		<option value="PUT">PUT</option>
+		<option value="DELETE">DELETE</option>
+	</select>
+	<input type="text" id="path" placeholder="Path" /><br />
+	<input type="text" id="body" placeholder="Body" />
+	<input type="submit" id="submit" value="SUBMIT" /><br />
+	<input type="text" id="cookies" placeholder="Cookies" />
+	<input type="submit" id="set" value="SET" />
+	<input type="submit" id="del" value="DELETE" /><br />
+	<textarea id="currentCookies" readonly></textarea>
+	<hr />
+	<input type="text" id="status" placeholder="status" readonly /><br />
+	<textarea id="response" readonly></textarea>
+
+	<script src="./main.js"></script>
+</body>
