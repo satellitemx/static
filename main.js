@@ -1,5 +1,6 @@
 var panel = document.getElementById("panel");
 var searchbox = document.getElementById("searchbox");
+var search = document.getElementById("search");
 var go = document.getElementById("go");
 var locations = document.getElementsByClassName("controls");
 
@@ -46,6 +47,7 @@ function pan(event) {
 }
 
 function shiftPanel() {
+
 	if (window.innerWidth <= 640) {
 		panel.style.top = "40px";
 	} else {
