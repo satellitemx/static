@@ -1,5 +1,6 @@
 var panel = document.getElementById("panel");
-
+var searchbox = document.getElementById("searchbox");
+var go = document.getElementById("go");
 var locations = document.getElementsByClassName("controls");
 
 if (!apple()) {
@@ -7,6 +8,8 @@ if (!apple()) {
 }
 
 window.addEventListener('resize', shiftPanel);
+
+go.addEventListener('click', doSearch);
 
 for (var i = 0; i < locations.length; i++) {
 	locations[i].addEventListener("click", pan);
@@ -48,6 +51,14 @@ function shiftPanel() {
 	} else {
 		panel.style.top = "30px";
 	}
+}
+
+function doSearch() {
+	if (searchbox.value == "") {
+		return;
+	}
+	alert("You searched " + searchbox.value);
+	searchbox.value = "";
 }
 
 shiftPanel();

@@ -5,10 +5,16 @@
 	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 	<link href='./map.css' rel='stylesheet' />
+	<link href="./inter/inter.css" rel="stylesheet" />
 </head>
 <body>
+	<div id="search">
+		<input type="text" id="searchbox" placeholder="Where do you want to go?" />
+		<img src="./assets/go.png" id="go" />
+	</div>
 	<div id='map'></div>
 	<div id="panel">
+		<span>Dev control panel</span>
 		<input type="button" id="unimelb" class="controls" value="University of Melbourne" />
 		<input type="button" id="pdp" class="controls" value="Pewdiepie Mural on Sydney Road" />
 	</div>
