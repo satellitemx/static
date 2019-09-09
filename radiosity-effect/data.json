@@ -1,0 +1,27 @@
+[
+    {
+        "artist": "Issac Owens",
+        "handle": "@issacowens",
+        "img": "io.jpg"
+    },
+    {
+        "artist": "Tom Barrett",
+        "handle": "@wistomsin",
+        "img": "tb.jpg"
+    },
+    {
+        "artist": "Christian Löhner",
+        "handle": "@diren89",
+        "img": "cl.jpg"
+    },
+    {
+        "artist": "冬城",
+        "handle": "@zgc1993",
+        "img": "zgc.jpg"
+    },
+    {
+        "artist": "Zhang kenny",
+        "handle": "@kennyzhang29",
+        "img": "k29.jpg"
+    }
+]
