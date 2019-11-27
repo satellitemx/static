@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-au">
+
+<head>
+    <title>Spot the difference!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="./main.css" rel="stylesheet" />
+    <script src="./main.js"></script>
+</head>
+
+<body onload="main()">
+    <div class="container" id="intro">
+        <p>You're about to hear 1 minute of audio samples at <b>80 Kbps</b> converted from CD quality source. This
+            music, Late Autumn, is composed by <a class="link" href="https://cultclassicrecords.bandcamp.com/track/late-autumn
+" target="_blank">Eddie</a>. </p>
+        <p>Can you tell the difference between FFmpeg native AAC encoder and Apple's CoreAudio encoder? </p>
+        <p>Wear a pair of headphones for the best experience. </p>
+        <a href="#player" class="button" id="btn-start">START</a>
+    </div>
+    <div class="container" id="player">
+        <p>Press the button below to start playback. </p>
+        <a class="button" id="btn-control">Play</a>
+        <p>You can switch between the two audio playback on-the-fly. </p>
+        <a class="button" id="btn-toggle">Toggle</a>
+        <div class="spoiler">
+            <span class="status" id="status">FFmpeg Native AAC</span>
+            <span class="spoiler-cover">Click and hold to check which one is playing!</span>
+        </div>
+    </div>
+    <div class="container">
+        <audio src="./aac-80.m4a"></audio>
+        <audio src="./coreaudio-80.m4a" muted></audio>
+    </div>
+</body>
+
+</html>
